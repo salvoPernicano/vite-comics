@@ -13,20 +13,26 @@ export default {
         <div class="lowerMain">
             <h1>Lorem, ipsum dolor.</h1>
         </div>
+
     </main>
+
+
+    
 </template>
 
 <style lang="scss" scoped>
-@import '../styles/partials/variables';
+@use '../styles/partials/variables' as *;
 .upperMain{
     background-color: $siteBlack;
     text-align: center;
-    padding: 3em;
+    padding: 3.5em;
+    height: 50%;
 }
 .lowerMain{
     background-color: $siteBlue;
     text-align: center;
     padding: 3em;
+    height: 50%;
 }
 h1{
     color: white;

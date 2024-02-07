@@ -1,10 +1,12 @@
 <script>
 import AppNavbar from './components/AppNavbar.vue';
-import AppMain from './components/AppMain.vue'
+import AppMain from './components/AppMain.vue';
+import AppFooter from './components/AppFooter.vue';
 export default {
     components: {
         AppNavbar,
-        AppMain
+        AppMain,
+        AppFooter
     }
 }
 </script>
@@ -12,12 +14,11 @@ export default {
 <template>
     <AppNavbar />
     <AppMain/>
+    <AppFooter/>
 </template>
 
 <style lang="scss">
 @use './styles/general.scss' ;
-body{
-    background-color: aqua;
-    height: 100vh;
-}
+
+
 </style>

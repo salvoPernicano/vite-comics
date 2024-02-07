@@ -77,7 +77,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-@import '../styles/partials/variables';
+@use '../styles/partials/variables' as *;
  header{
     background-color: white;
     nav{

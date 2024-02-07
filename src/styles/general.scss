@@ -8,6 +8,16 @@
 
 body{
     font-family: sans-serif;
-    background-color: orange;
 }
 
+#app{
+    height: 100vh;
+}
+
+main{
+    height: calc(50vh - 120px);
+}
+
+footer{
+    height: 50vh;
+}
