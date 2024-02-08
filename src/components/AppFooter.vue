@@ -130,11 +130,6 @@ export default {
     align-items: center;
     padding: 2em;
     height: 120px;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-
     button {
         background-color: transparent;
         border: 2px solid $siteBlue;
