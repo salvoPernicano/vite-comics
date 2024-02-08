@@ -57,7 +57,7 @@ export default {
                     </div>
                 </div>
             </div>
-            <img  id="bigLogo" src="../assets/img/dc-logo-bg.png" alt="">
+          
         </div>
 
         <div class="signUp">
@@ -85,13 +85,9 @@ export default {
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
-    padding: 2em;
-    display: flex;
-    justify-content: space-around;
     gap: 20px;
     color: white;
     height: calc(50vh - 120px);
-    position: relative;
     h3 {
         margin-bottom: 1em;
 
@@ -111,16 +107,24 @@ export default {
         }
     }
 };
-#bigLogo{
-    scale: 1.6;
-}
+
 
 .linksContainer{
     display: flex;
+    background-image: url(../assets/img/dc-logo-bg.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    height: 100%;
+    padding-inline: 2em;
+}
+
+.leftLinks{
+    padding: 2em;
 }
 .rightLinks {
     display: flex;
     gap: 20px;
+    padding: 2em;
 }
 
 .signUp {
