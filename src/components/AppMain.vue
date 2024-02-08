@@ -1,7 +1,10 @@
 <script>
-
+import AppComics from '../components/AppComics.vue';
 export default {
     name: 'AppMain',
+    components :{
+        AppComics
+    },
     data() {
         return {
             comicsArray: [
@@ -88,15 +91,14 @@ export default {
         <div class="upperMain">
             <div class="upperBg"></div>
             <div class="comicsContainer">
-                <div v-for="(element,index) in comicsArray" class="item">
-                    <figure>
-                        <img :src="element.thumb" alt="item">
-                    </figure>
-                    <div class="comicType">
-                        <span>{{ element.series }}</span>
-
-                    </div>
-                </div>
+                <AppComics v-for="(element,index) in comicsArray"
+                :propThumb="element.thumb"
+                :propSeries="element.series"></AppComics>
+                <!-- <AppComics/> -->
+                <!-- <AppComics  v-for="(element,index) in comicsArray" 
+                :key="index"
+                :propsSrc="element.thumb"
+                :propsSeries="element.series"/> -->
             </div>
         </div>
         <div class="lowerMain">
@@ -142,33 +144,12 @@ export default {
     align-items: center;
     flex-wrap: wrap;
     gap: 10px;
-    .item{
-        color: white;
-        flex-basis: calc(100% / 6 - 10px);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    figure{
-    width: 80%;
-    height: 300px;
-        img{
-            height: 100%;
-            width: 100%;
-            object-fit: cover;
-        }
-    }
-    .comicType{
-        padding: 10px;
-        height: 50px;
-    }
-}
+   
 }
 .upperBg {
     background-image: url(../assets/img/jumbotron.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    // background-attachment: fixed;
     background-position: top;
     height: 50vh;
 }
